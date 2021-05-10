@@ -1,0 +1,171 @@
+/* general */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	font-family: 'Playfair Display', sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.contentDarker {
+  background-color: #f5a8a8;
+  margin: 0;
+  padding: 3%;
+}
+
+.contentDark {
+  background-color: #f1d1d1;
+  padding: 10%;
+  margin: 0;
+}
+
+.contentLight {
+  background-color: #f3e1e1;
+  padding: 10%;
+  margin: 0;
+}
+
+/* navbar */
+.navbarContent {
+  padding: 7px 10%;
+  justify-content: space-between;
+  top: 0;
+  transition: top 0.3s;
+}
+
+.navbarHomeButton {
+	padding: 0;
+	margin: 0;
+}
+
+/* intro and conclusion */
+.mediaContent {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mediaContent img {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+}
+
+/* only intro */
+.introContainer {
+  padding-top: 8%;
+}
+
+.introImg {
+	transform: rotate(10deg);
+	right: 5%;
+}
+
+/* only conclusion */
+.conclusionImg {
+  transform: rotate(-10deg);
+  left: 5%;
+}
+
+/* short messages */
+.mediaContent i {
+  padding-bottom: 3%;
+}
+
+/* carousel */
+.carouselContainer {
+  text-align: center;
+}
+
+/* pictures carousel */
+.carouselImg {
+  height: 70vh;
+}
+
+/* poems carousel */
+.poemContent {
+  height: 70vh;
+  padding: 5% 10%;
+  width: 80%;
+  overflow-y: scroll;
+  border: #f1d1d1 solid 2px ;
+  border-radius: 10px;
+  margin-right: 4%;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+}
+
+.footer a {
+	color: #323232;
+	padding: 0 1% 2%;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* media queries */
+@media (max-width: 990px) {
+  h1, h2, h3, h4, h5, h6, p, span {
+    font-size: 0.9rem;
+  }
+
+	.introContainer {
+    text-align: center;
+    padding-top: calc(54px + 5%);
+	}
+
+	.mediaContent p {
+		text-align: center;
+	}
+
+	.mediaContent img {
+		width: 43%;
+		transform: rotate(0deg);
+		position: static;
+    margin: 0 auto;
+  }
+
+  .mediaContent i {
+    padding: 0;
+    margin: 3% 0;
+  }
+
+  .carousel-content {
+    height: 50vh;
+    position: relative;
+  }
+
+  .carouselImg {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+	.conclusionImg {
+		width: 43%;
+		transform: rotate(0deg);
+    position: static;
+    padding-bottom: 3%;
+  }
+}
